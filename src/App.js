@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import LoginPage from './components/Pages/LoginPage';
+import LoginPage from './components/Pages/login/LoginPage';
+
 
 function App() {
   return <LoginPage/>
