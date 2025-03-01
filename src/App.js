@@ -13,7 +13,7 @@ function App() {
   return (
   <Routes>
     <Route path="/" element={<LoginPage />}/>
-    <Route path="/order" element={<Orderpage />}/>
+    <Route path="/Order/:username" element={<Orderpage />}/>
     <Route path="*" element={<ErreurPage />}/>
     
   </Routes>
