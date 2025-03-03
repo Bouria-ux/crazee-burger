@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
-import { Link, useNavigate } from "react-router-dom"
-import "./LoginForm.css"
+import { useNavigate } from "react-router-dom"
+
+import styled from 'styled-components'
+import { theme } from '../../../theme'
 
 export default function LoginForm() {
 // state
@@ -20,22 +22,29 @@ export default function LoginForm() {
   setinputValue(event.target.value)
  }
 
- const titreH2Style = {backgroundColor: "green", color: "white", fontSize: 20}
+
 //Affichage
   return (
-    <form action="submit" onSubmit={handleSubmit}>
-        <h1 style={{ color: "red" }} className="alex">Bienvenue chez nous !</h1>
-        <br/>
-        <h2 className="bonbon">Connectez-vous</h2>
-            <input 
-            value={inputValue} 
-            onChange={handleChange} 
-            type="text" 
-            placeholder="Entrez votre prenom..." 
-            required 
-            />
-            <button>Accédez a votre espace</button>
+    <div action="submit" onSubmit={handleSubmit}>
+        <div >
+          <h1  >Bienvenue chez nous !</h1>
+          <br/>
+          <h2 >Connectez-vous</h2>
+        </div >
+           <div >
+             <input 
+             value={inputValue} 
+             onChange={handleChange} 
+             type="text" 
+             placeholder="Entrez votre prenom" 
+             required 
+             />
+             <button>Accéder a mon espace</button>
+           </div>
 
-    </form>
+    </div>
   )
 }
+
+
+
