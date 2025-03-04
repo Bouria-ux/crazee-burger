@@ -28,7 +28,7 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 
-::before{
+&:before {
   content: "";
   background: url("/images/burger-and-fries--background.jpg") rgba(0, 0, 0, 0.7);
   background-size: cover;
