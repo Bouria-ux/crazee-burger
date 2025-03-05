@@ -1,5 +1,6 @@
 
 import styled from "styled-components";
+import { theme } from "../../theme";
 
 export default function Input({value, onChange, Icon, ...extraProps }) {
     console.log("extraProps: ", extraProps)
@@ -21,32 +22,32 @@ export default function Input({value, onChange, Icon, ...extraProps }) {
 const InputSyled = styled.div`
 
 background-color: #fff;
-border-radius: 5px;
+border-radius: ${theme.borderRadius.round};
 display: flex;
 align-items: center;
 padding: 18px 24px;
 margin: 18px 0;
 
 .icon{
- font-size: 15px;
+ font-size:${theme.fonts.size.P0};
  margin-right: 8px;
- color: #93a2b1;
+ color: ${theme.colors.greySemiDark};
 }
 
 input{
   width: 100%;
   border: none;
-  font-size: 15px;
-  color: #17161a;
+  font-size: ${theme.fonts.size.P0};
+  color: ${theme.colors.dark};
   
 
-}
+
 
 &::placeholder{
-  background: white;
-  color: lightgrey;
+  background: ${theme.colors.white};
+  color: ${theme.colors.greyMedium}
 }
 
-
+}
   
 `;
