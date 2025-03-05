@@ -3,15 +3,19 @@ import { useNavigate } from "react-router-dom"
 
 
 import styled from 'styled-components'
-import { theme } from '../../../theme'
-import { IoChevronForward } from 'react-icons/io5'
+
 import TextInput from '../../reusable-ui/TextInput'
 import { BsPersonCircle } from 'react-icons/bs'
 
 
+import { IoChevronForward } from 'react-icons/io5'
+import PrimaryButton from '../../reusable-ui/PrimaryButton'
+
+
 export default function LoginForm() {
 // state
-    const [inputValue, setinputValue] = useState("")
+    const [inputValue, setInputValue] = useState("")
+   
     const navigate = useNavigate()
     // comportements
 
@@ -19,13 +23,15 @@ export default function LoginForm() {
         event.preventDefault()
        // alert(`Bonjour ${inputValue}`)
     
-        setinputValue("")
+        setInputValue("")
         navigate(`Order/${inputValue}`)
      }
 
  const handleChange = (event) => { 
-  setinputValue(event.target.value)
+  setInputValue(event.target.value)
  }
+
+ 
 
 
 //Affichage
@@ -36,6 +42,7 @@ export default function LoginForm() {
           <hr/>
           <h2 >Connectez-vous</h2>
         </div >
+      
        
            <TextInput 
            value={inputValue}
@@ -44,12 +51,10 @@ export default function LoginForm() {
            required  
            Icon={<BsPersonCircle className="icon" />} 
            />
-            
-              
-               <button className="button-with-icon">
-                <span>Accéder a mon espace</span>
-                <IoChevronForward className="icon" />
-                </button>
+   
+             <PrimaryButton  label={"Acceder a mon espace"} Icon={<IoChevronForward className="Icon" />}
+               />
+             
              
           
 
@@ -84,53 +89,6 @@ h2{
   font-size: 30px;
 }
 
-
-
-
-.button-with-icon{
- width: 100%;
- border: 1px solid red;
- display: inline-flex;
- justify-content: center;
- align-items: center;
- position: relative;
- white-space: nowrap;
- text-decoration: none;
- line-height: 1;
-
- padding: 18px 24px;
- border-radius: 5px;
- font-size: 15px;
- font-weight: 800;
- color: white;
- background-color: #ff9f1b;
- border: 1px solid #ff9f1b;
-
-
-
-
-
-
-&:hover:not(:disabled) {
-  background-color: white;
-  color: #ff9f1b;
-  border: 1px solid #ff9f1b;
-  transition: all 200ms ease;
-
-}
-
-&:active {
-  color: white;
-  background-color: #ff9f1b;
-  border: 1px solid #ff9f1b;
-
-}
-
-&:disabled{
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
 .icon{
   display: flex;
   justify-content: center;
@@ -139,7 +97,9 @@ h2{
   margin-left: 10px;
 }
 
-}
+
+
+
 
 `;
 

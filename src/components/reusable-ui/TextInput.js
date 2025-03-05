@@ -20,14 +20,12 @@ export default function Input({value, onChange, Icon, ...extraProps }) {
 
 const InputSyled = styled.div`
 
-
 background-color: #fff;
 border-radius: 5px;
 display: flex;
 align-items: center;
 padding: 18px 24px;
 margin: 18px 0;
-
 
 .icon{
  font-size: 15px;
@@ -36,14 +34,13 @@ margin: 18px 0;
 }
 
 input{
+  width: 100%;
   border: none;
   font-size: 15px;
   color: #17161a;
   
 
 }
-
-
 
 &::placeholder{
   background: white;
