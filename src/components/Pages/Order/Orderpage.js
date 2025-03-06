@@ -25,7 +25,7 @@ export default function Orderpage() {
 }
 
 const OrderpageStyled = styled.div`
-background: orange;
+background: ${theme.colors.primary};
 height: 100vh;
 display: flex;
 justify-content: center;
