@@ -2,9 +2,11 @@ import styled from "styled-components";
 import { theme } from "../../theme";
 
 
-export default function Logo({className}) {
+export default function Logo({ className, onClick }) {
+
+
   return (
-    <LogoStyled className={className}>
+    <LogoStyled className="logo-order-page" onClick={onClick}>
       <h1>SAMA</h1> 
       <img src="/images/logo-orange.png" alt="logo-crazee-burger"></img>
       <h1>BURGER</h1>
