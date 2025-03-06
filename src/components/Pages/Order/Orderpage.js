@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import Navbar from './Navbar'
 import { useParams } from 'react-router-dom'
 import Main from './Main'
+import { theme } from '../../../theme'
 
 export default function Orderpage() {
   //State
@@ -36,6 +37,7 @@ align-items: center;
   width: 1400px;
   display: flex;
   flex-direction: column;
+  border-radius: ${theme.borderRadius.extraRound};
 
 
  
