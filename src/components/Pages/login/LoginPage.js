@@ -10,7 +10,7 @@ export default function LoginPage() {
     // affichage (render)
 
   return <LoginPageStyled>
-  <Logo/>
+  <Logo className={"logo-login-page"}/>
     <LoginForm />
   </LoginPageStyled> 
     
@@ -28,6 +28,7 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 
+
 &:before {
   content: "";
   background: url("/images/burger-and-fries--background.jpg") rgba(0, 0, 0, 0.7);
@@ -41,5 +42,11 @@ align-items: center;
   right: 0;
   bottom: 0;
   z-index: -1;
+
+
  }
+
+ .logo-login-page{
+    transform: scale(2.5);
+  }
 `

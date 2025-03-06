@@ -2,6 +2,7 @@ import React from 'react'
 
 import styled from 'styled-components';
 import NavbarRightSide from './NavbarRightSide'
+import Logo from "../../reusable-ui/Logo"
 export default function Navbar({username}) {
 
      //State
@@ -10,7 +11,8 @@ export default function Navbar({username}) {
       
   return (
     <NavbarStyled >
-    <div className="left-side">Left</div>
+      <Logo />
+   
     <NavbarRightSide username={username}/>
    
   </NavbarStyled>
@@ -23,12 +25,9 @@ const  NavbarStyled= styled.nav`
     height: 10vh;
     display: flex;
     justify-content: space-between;
+    padding: 0 20px;
     /* align-items: center;*/
   
-    .left-side{
-      background: pink;
-
-    }
 
     
 `;
