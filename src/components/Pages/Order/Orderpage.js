@@ -1,10 +1,12 @@
 import React from 'react'
 
 import styled from 'styled-components'
-import Navbar from './Navbar'
+
 import { useParams } from 'react-router-dom'
-import Main from './Main'
+
 import { theme } from '../../../theme'
+import Main from './Main/Main'
+import Navbar from './Navbar/Navbar'
 
 export default function Orderpage() {
   //State
