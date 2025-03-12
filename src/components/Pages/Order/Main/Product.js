@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { theme } from '../../../../theme';
-import PrimaryButton from "../../../reusable-ui/PrimaryButton";
-
+import { theme } from '../../../../theme/index.js';
+import PrimaryButton from "../../../reusable-ui/PrimaryButton.js";
+import { formatPrice } from "../../../../utils/maths.js"
 
 export default function Product({ title, imageSource, price }) {
   return (
@@ -14,7 +14,7 @@ export default function Product({ title, imageSource, price }) {
         
             <div className="tilte">{title}</div>
             <div className="description">
-            <div className="left-description">{price}</div>
+            <div className="left-description">{formatPrice(price)}</div>
             <div className="right-description">
               <PrimaryButton className="primary-button" label={"Ajouter"} />
           </div>
