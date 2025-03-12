@@ -1,30 +1,30 @@
 import styled from "styled-components";
-import { theme } from '../../../../theme/index.js';
-import PrimaryButton from "../../../reusable-ui/PrimaryButton.js";
-import { formatPrice } from "../../../../utils/maths.js"
+import { theme } from '../../theme/index.js';
+import PrimaryButton from "./PrimaryButton.js";
 
-export default function Product({ title, imageSource, price }) {
+
+export default function Card({ title, imageSource, leftDescription }) {
   return (
-    <ProductStyled className="produit">
+    <CardStyled className="produit">
     <div className="image">
       <img src={imageSource} alt={title} />
     </div>
         <div className="text-info">
-          
+        
         
             <div className="tilte">{title}</div>
             <div className="description">
-            <div className="left-description">{formatPrice(price)}</div>
+            <div className="left-description">{leftDescription}</div>
             <div className="right-description">
               <PrimaryButton className="primary-button" label={"Ajouter"} />
           </div>
         </div>
         </div>
-  </ProductStyled>
+  </CardStyled>
   )
 }
 
-const ProductStyled = styled.div`
+const CardStyled = styled.div`
 
 background: ${theme.colors.white};
   width: 200px;
@@ -68,6 +68,8 @@ background: ${theme.colors.white};
       text-overflow: ellipsis;
       font-family: "Amatic SC", cursive;
     }
+
+    
 
     .description {
       display: grid;
